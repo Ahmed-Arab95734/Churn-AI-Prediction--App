@@ -48,15 +48,15 @@ st.sidebar.header("🔧 Input Customer Information")
 
 # Input fields for the model
 Age = st.sidebar.slider("Age (years)", 18, 100, 22)
-Gender = st.sidebar.selectbox("Gender", ["Male", "Female"])
-Tenure = st.sidebar.slider("Tenure (months)", 0, 72, 12)
-Usage_Frequency = st.sidebar.slider("Usage Frequency (per week)", 0, 30, 5)
-Support_Calls = st.sidebar.slider("Support Calls (per day)", 0, 10, 2)
-Payment_Delay = st.sidebar.slider("Payment Delay (days)", 0, 60, 5)
-Subscription_Type = st.sidebar.selectbox("Subscription Type", ["Basic", "Standard", "Premium"])
-Contract_Length = st.sidebar.selectbox("Contract Length", ["Monthly", "Quarterly", "Annual"])
-Total_Spend = st.sidebar.slider("Total Spend ($)", 0, 1000, 100)
-Last_Interaction = st.sidebar.slider("Last Interaction (days ago)", 0, 30, 5)
+Gender = st.sidebar.selectbox("Gender", ["Male", "Female"],index=1)
+Tenure = st.sidebar.slider("Tenure (months)", 0, 72, 59)
+Usage_Frequency = st.sidebar.slider("Usage Frequency (per week)", 0, 30, 4)
+Support_Calls = st.sidebar.slider("Support Calls (per day)", 0, 10, 3)
+Payment_Delay = st.sidebar.slider("Payment Delay (days)", 0, 60, 20)
+Subscription_Type = st.sidebar.selectbox("Subscription Type", ["Basic", "Standard", "Premium"],index=2)
+Contract_Length = st.sidebar.selectbox("Contract Length", ["Monthly", "Quarterly", "Annual"],index=1)
+Total_Spend = st.sidebar.slider("Total Spend ($)", 0, 1000, 501)
+Last_Interaction = st.sidebar.slider("Last Interaction (days ago)", 0, 30, 15)
 
 # Prepare input for prediction
 input_data = np.array([[
@@ -105,3 +105,4 @@ with col2:
     ax.axis("equal")
 
     st.pyplot(fig)
+
