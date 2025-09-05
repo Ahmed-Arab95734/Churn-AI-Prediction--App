@@ -47,7 +47,7 @@ Churn_labels = {0: "No (Customer will stay)", 1: "Yes (Customer will churn)"}
 st.sidebar.header("🔧 Input Customer Information")
 
 # Input fields for the model
-Age = st.sidebar.slider("Age (years)", 18, 100, 25)
+Age = st.sidebar.slider("Age (years)", 18, 100, 22)
 Gender = st.sidebar.selectbox("Gender", ["Male", "Female"])
 Tenure = st.sidebar.slider("Tenure (months)", 0, 72, 12)
 Usage_Frequency = st.sidebar.slider("Usage Frequency (per week)", 0, 30, 5)
@@ -103,4 +103,5 @@ with col2:
     ax.pie(prediction_proba, labels=labels, autopct="%1.1f%%",
            startangle=90, colors=colors, textprops={"fontsize": 8})
     ax.axis("equal")
+
     st.pyplot(fig)
