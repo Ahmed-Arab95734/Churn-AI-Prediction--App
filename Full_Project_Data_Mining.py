@@ -144,10 +144,20 @@ section[data-testid="stSidebar"] .stSelectbox div[role="listbox"] {
 section[data-testid="stSidebar"] label {
     color: #f1f1f1 !important;
 }
+
+
+div.stAlert.success {
+    color: white !important;          /* make text white */
+    background-color: #2e7d32 !important;  /* keep green background */
+    border: 1px solid #1b5e20;
+    border-radius: 8px;
+}
+
 </style>
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
+
 
 
 
