@@ -112,7 +112,7 @@ with col2:
 page_bg_img = """
 <style>
 [data-testid="stAppViewContainer"] {
-    background-image: url("https://img.freepik.com/premium-vector/abstract-hexagonal-molecular-structures-technology-background-science_41981-3716.jpg");
+    background-image: url("https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -136,5 +136,6 @@ page_bg_img = """
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
+
 
 
