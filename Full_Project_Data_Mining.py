@@ -106,3 +106,32 @@ with col2:
 
     st.pyplot(fig)
 
+# =========================
+# Background Image
+# =========================
+page_bg_img = """
+<style>
+[data-testid="stAppViewContainer"] {
+    background-image: url("https://plus.unsplash.com/premium_photo-1680608979589-e9349ed066d5?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+[data-testid="stHeader"] {
+    background: rgba(0,0,0,0); /* transparent header */
+}
+</style>
+"""
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
+
+[data-testid="stAppViewContainer"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.75); /* white overlay with transparency */
+    z-index: -1;
+}
