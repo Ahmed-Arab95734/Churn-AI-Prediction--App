@@ -112,7 +112,7 @@ with col2:
 page_bg_img = """
 <style>
 [data-testid="stAppViewContainer"] {
-    background-image: url("https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg");
+    background-image: url("https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -136,6 +136,7 @@ page_bg_img = """
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
+
 
 
 
