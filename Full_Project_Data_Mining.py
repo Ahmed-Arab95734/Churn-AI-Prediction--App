@@ -113,7 +113,7 @@ page_bg_img = """
 <style>
 /* Main app background */
 [data-testid="stAppViewContainer"] {
-    background-image: url("https://images.unsplash.com/photo-1534081333815-ae5019106622");
+    background-image: url("https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -148,6 +148,7 @@ section[data-testid="stSidebar"] label {
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
+
 
 
 
