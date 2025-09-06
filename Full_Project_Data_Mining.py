@@ -112,7 +112,7 @@ with col2:
 page_bg_img = """
 <style>
 [data-testid="stAppViewContainer"] {
-    background-image: url("https://plus.unsplash.com/premium_photo-1680608979589-e9349ed066d5?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-image: url("https://img.freepik.com/premium-vector/abstract-hexagonal-molecular-structures-technology-background-science_41981-3716.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -136,4 +136,5 @@ page_bg_img = """
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
+
 
