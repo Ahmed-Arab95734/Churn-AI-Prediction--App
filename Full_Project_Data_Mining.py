@@ -107,35 +107,40 @@ with col2:
     st.pyplot(fig)
 
 # =========================
-# Background Image with Overlay
+# Background Image with Light Text
 # =========================
 page_bg_img = """
 <style>
+/* Main app background */
 [data-testid="stAppViewContainer"] {
     background-image: url("https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    color: #f1f1f1;  /* light text */
 }
 
-[data-testid="stAppViewContainer"]::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.7); /* white overlay for readability */
-    z-index: -1;
+/* Sidebar background */
+[data-testid="stSidebar"] {
+    background-color: rgba(0, 0, 0, 0.7); /* semi-transparent dark for contrast */
+    color: #f1f1f1;
 }
 
+/* Transparent header */
 [data-testid="stHeader"] {
-    background: rgba(0,0,0,0); /* transparent header */
+    background: rgba(0,0,0,0);
+}
+
+/* Make all markdown and widget labels light */
+h1, h2, h3, h4, h5, h6, p, label, span, div {
+    color: #f1f1f1 !important;
 }
 </style>
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
+
+
 
 
 
