@@ -146,17 +146,30 @@ section[data-testid="stSidebar"] label {
 }
 
 
+/* Success box background (keep green) */
 div.stAlert.success {
-    color: white !important;          /* make text white */
-    background-color: #2e7d32 !important;  /* keep green background */
+    background-color: #2e7d32 !important;
     border: 1px solid #1b5e20;
     border-radius: 8px;
+}
+
+/* Make all text inside success white */
+div.stAlert.success p, 
+div.stAlert.success span, 
+div.stAlert.success strong {
+    color: white !important;
+}
+
+/* Make the checkmark icon white */
+div.stAlert.success [data-testid="stMarkdownContainer"]::before {
+    filter: brightness(0) invert(1);
 }
 
 </style>
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
+
 
 
 
