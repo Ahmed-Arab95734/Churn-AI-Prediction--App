@@ -107,7 +107,7 @@ with col2:
     st.pyplot(fig)
 
 # =========================
-# Background Image
+# Background Image with Overlay
 # =========================
 page_bg_img = """
 <style>
@@ -117,13 +117,6 @@ page_bg_img = """
     background-position: center;
     background-repeat: no-repeat;
 }
-[data-testid="stHeader"] {
-    background: rgba(0,0,0,0); /* transparent header */
-}
-</style>
-"""
-st.markdown(page_bg_img, unsafe_allow_html=True)
-
 
 [data-testid="stAppViewContainer"]::before {
     content: "";
@@ -132,6 +125,15 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.75); /* white overlay with transparency */
+    background-color: rgba(255, 255, 255, 0.7); /* white overlay for readability */
     z-index: -1;
 }
+
+[data-testid="stHeader"] {
+    background: rgba(0,0,0,0); /* transparent header */
+}
+</style>
+"""
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
