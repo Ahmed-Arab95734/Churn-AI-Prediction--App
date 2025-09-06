@@ -107,13 +107,13 @@ with col2:
     st.pyplot(fig)
 
 # =========================
-# Background Image with Light Text
+# Background Image with Light Text and Dark Sidebar Widgets
 # =========================
 page_bg_img = """
 <style>
 /* Main app background */
 [data-testid="stAppViewContainer"] {
-    background-image: url("https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg");
+    background-image: url("https://images.unsplash.com/photo-1534081333815-ae5019106622");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -122,17 +122,26 @@ page_bg_img = """
 
 /* Sidebar background */
 [data-testid="stSidebar"] {
-    background-color: rgba(0, 0, 0, 0.7); /* semi-transparent dark for contrast */
+    background-color: rgba(0, 0, 0, 0.8); /* dark sidebar */
     color: #f1f1f1;
 }
 
-/* Transparent header */
-[data-testid="stHeader"] {
-    background: rgba(0,0,0,0);
+/* Sidebar selectbox, slider, etc. */
+section[data-testid="stSidebar"] .stSelectbox div[data-baseweb="select"] {
+    background-color: #333333;   /* dark background */
+    color: #f1f1f1;              /* light text */
+    border-radius: 8px;
+    border: 1px solid #555;
 }
 
-/* Make all markdown and widget labels light */
-h1, h2, h3, h4, h5, h6, p, label, span, div {
+/* Dropdown menu options */
+section[data-testid="stSidebar"] .stSelectbox div[role="listbox"] {
+    background-color: #222222;
+    color: #f1f1f1;
+}
+
+/* Label text */
+section[data-testid="stSidebar"] label {
     color: #f1f1f1 !important;
 }
 </style>
