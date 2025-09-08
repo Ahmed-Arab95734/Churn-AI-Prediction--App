@@ -113,7 +113,7 @@ page_bg_img = """
 <style>
 /* Main app background */
 [data-testid="stAppViewContainer"] {
-    background-image: url("https://drive.google.com/file/d/1gx95wVSOtlQf8bkScba4CRQJGuR1Unie/view?usp=drivesdk");
+    background-image: url("https://drive.google.com/file/d/1gx95wVSOtlQf8bkScba4CRQJGuR1Unie/preview");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -169,6 +169,7 @@ div.stAlert.success [data-testid="stMarkdownContainer"]::before {
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
+
 
 
 
