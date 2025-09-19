@@ -113,7 +113,7 @@ page_bg_img = """
 <style>
 /* Main app background */
 [data-testid="stAppViewContainer"] {
-    background-image: url("https://images.unsplash.com/photo-1689732888407-310424e3a372?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-image: url("https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -169,6 +169,7 @@ div.stAlert.success [data-testid="stMarkdownContainer"]::before {
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
+
 
 
 
